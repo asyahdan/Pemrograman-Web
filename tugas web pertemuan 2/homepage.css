@@ -1,0 +1,29 @@
+﻿body {
+  background-color: powderblue;
+  text-align: center;
+  padding: 20px;
+  background-image: url("https://images3.alphacoders.com/889/889996.png");
+} BN
+h1 {
+  color: white;
+}
+p {
+  color: black;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}

@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="homepage.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website MK Pemrograman Web SV IPB</title>
+
+    <!-- Mulai dengan menggunakan versi01.css secara default -->
+    <link rel="stylesheet" href="homepage.css" id="styleSheet">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .style-switcher {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Konten halaman -->
+    <h1>Selamat datang di MK Pemrograman Web SV IPB</h1>
+	<img src="https://raw.githubusercontent.com/asyahdan/Pemrograman-Web/main/5.png" alt="gambar ini tidak tersedia" width="100px" height="100px"><br>
+    <p>Ini adalah halaman utama website.</p>
+    <!-- JavaScript untuk mengganti stylesheet -->
+    <script>
+        function applyStyle(styleName) {
+            document.getElementById('styleSheet').href = styleName;
+        }
+    </script>
+
+<div class="topnav">
+    <!-- Tombol/link untuk mengganti stylesheet -->
+    <div class="style-switcher">
+        <button onclick="applyStyle('homepage.css')">Versi 1</button>
+        <button onclick="applyStyle('homepage-2.css')">Versi 2</button>
+    </div>
+</div>
+
+</body>
+</html>
