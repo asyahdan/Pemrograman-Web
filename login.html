@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .error {
+            color: red;
+            font-size: 0.8em;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form id="loginForm" action="#" method="post" onsubmit="return validateForm()">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <div id="usernameError" class="error"></div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <div id="passwordError" class="error"></div>
+            <input type="submit" value="Login">
+            <div id="loginError" class="error"></div>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            var username = document.getElementById('username').value.trim();
+            var password = document.getElementById('password').value.trim();
+            var usernameError = document.getElementById('usernameError');
+            var passwordError = document.getElementById('passwordError');
+            var loginError = document.getElementById('loginError');
+
+            // Reset error messages
+            usernameError.innerHTML = '';
+            passwordError.innerHTML = '';
+            loginError.innerHTML = '';
+
+            if (username === '' || password === '') {
+                if (username === '') {
+                    usernameError.innerHTML = 'Username harus diisi';
+                }
+                if (password === '') {
+                    passwordError.innerHTML = 'Password harus diisi';
+                }
+                return false;
+            } else if (username === 'admin' && password === '123') {
+                window.location.href = 'https://html-preview.github.io/?url=https://github.com/asyahdan/Pemrograman-Web/blob/main/homepage.html';
+                return false; // Prevent form submission for demonstration
+            } else {
+                loginError.innerHTML = 'Akun tidak dikenali';
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
